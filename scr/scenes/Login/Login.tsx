@@ -1,29 +1,12 @@
-import { FormikProps, useFormikContext } from 'formik';
 import React from 'react';
-import { If } from 'react-if';
-import { LoadingIndicator } from 'scr/components';
-import {
-  ButtonText,
-  EmptyWrapper,
-  ErrorText,
-  FormWrapper,
-  SubmitButton,
-  TextInput,
-  Wrapper,
-} from './styles';
+
+import { LoginText, Wrapper } from './styles';
 
 const Login: React.FC = () => {
-  const {
-    values,
-    handleBlur,
-    handleSubmit,
-    setFieldValue,
-    errors,
-    isSubmitting,
-  }: FormikProps<CredentialType> = useFormikContext();
   return (
     <Wrapper>
-      <FormWrapper>
+      <LoginText>Olá Mundo</LoginText>
+      {/* <FormWrapper>
         <TextInput
           placeholder="Email Address"
           keyboardType="email-address"
@@ -50,7 +33,7 @@ const Login: React.FC = () => {
             <LoadingIndicator large />
           </EmptyWrapper>
         </If>
-      </FormWrapper>
+      </FormWrapper> */}
     </Wrapper>
   );
 };

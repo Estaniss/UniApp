@@ -16,16 +16,16 @@ const smallSpacing = getTheme('smallSpacing');
 const mediumRadius = getTheme('mediumRadius');
 
 export const Wrapper = styled.View`
-  flex: 1;
   justify-content: center;
+  display: flex;
+  align-items: center;
   background-color: ${backgroundColor};
-  padding: ${moderateScale(10)}px;
+  width: 100%;
+  flex: 1;
 `;
 
-export const LoginText = styled.Text``;
-
-export const ButtonText = styled.Text`
-  color: ${contrastColor};
+export const LoginText = styled.Text`
+  font-size: 32px;
 `;
 
 export const SubmitButton = styled(Touchable)`

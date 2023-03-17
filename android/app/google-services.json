@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "345899340812",
+    "project_id": "cardapio-moriah",
+    "storage_bucket": "cardapio-moriah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345899340812:android:ca55871c63bb45cea04a29",
+        "android_client_info": {
+          "package_name": "com.reactnativetemplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345899340812-b1l5fvr1tm3qglfvd1n660b9esjo747f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK9kWCEfDnX4f_I8bPR9UcNVdd_3cTtHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345899340812-b1l5fvr1tm3qglfvd1n660b9esjo747f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

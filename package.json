@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "SET ENVFILE=.env.dev && npx react-native start --reset-cache",
-    "android": "SET ENVFILE= '.env.dev' && npx react-native run-android",
+    "start": "npx react-native start --reset-cache",
+    "android": "npx react-native run-android",
     "ios": "react-native run-ios",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
