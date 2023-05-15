@@ -1,2 +1,2 @@
-# react-native-template
-Template para aplicação mobile
+# Projeto UniApp
+Projeto destinado a matéria de Desenvolvimento para dispositivos móveis
