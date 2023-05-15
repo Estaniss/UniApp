@@ -1,12 +1,27 @@
+import { FormikProps, useFormikContext } from 'formik';
 import React from 'react';
 
-import { LoginText, Wrapper } from './styles';
+import {
+  ButtonText,
+  FormWrapper,
+  LoginText,
+  SubmitButton,
+  TextInput,
+  Wrapper,
+} from './styles';
 
 const Login: React.FC = () => {
+  const {
+    values,
+    handleBlur,
+    handleSubmit,
+    setFieldValue,
+  }: FormikProps<CredentialType> = useFormikContext();
+
   return (
     <Wrapper>
-      <LoginText>Olá Mundo</LoginText>
-      {/* <FormWrapper>
+      <LoginText>LOGIN</LoginText>
+      <FormWrapper>
         <TextInput
           placeholder="Email Address"
           keyboardType="email-address"
@@ -14,7 +29,6 @@ const Login: React.FC = () => {
           onBlur={handleBlur('login')}
           onChangeText={(e: string) => setFieldValue('login', e.trim())}
         />
-        {errors.login && <ErrorText>{errors?.login}</ErrorText>}
         <TextInput
           placeholder="Password"
           value={values.password}
@@ -22,18 +36,10 @@ const Login: React.FC = () => {
           onChangeText={(e: string) => setFieldValue('password', e.trim())}
           secureTextEntry
         />
-        {errors.password && <ErrorText>{errors.password}</ErrorText>}
-        <If condition={!isSubmitting}>
-          <SubmitButton onPress={handleSubmit}>
-            <ButtonText>Entrar</ButtonText>
-          </SubmitButton>
-        </If>
-        <If condition={isSubmitting}>
-          <EmptyWrapper>
-            <LoadingIndicator large />
-          </EmptyWrapper>
-        </If>
-      </FormWrapper> */}
+        <SubmitButton onPress={handleSubmit}>
+          <ButtonText>Entrar</ButtonText>
+        </SubmitButton>
+      </FormWrapper>
     </Wrapper>
   );
 };

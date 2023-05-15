@@ -13,14 +13,22 @@ import java.util.ArrayList;
 
 // @react-native-community/async-storage
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+// @react-native-picker/picker
+import com.reactnativecommunity.picker.RNCPickerPackage;
 // lottie-react-native
 import com.airbnb.android.react.lottie.LottiePackage;
 // react-native-config
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
+// react-native-geolocation-service
+import com.agontuk.RNFusedLocation.RNFusedLocationPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 // react-native-haptic-feedback
 import com.mkuczera.RNReactNativeHapticFeedbackPackage;
+// react-native-permissions
+import com.zoontek.rnpermissions.RNPermissionsPackage;
+// react-native-push-notification
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-safe-area-context
@@ -75,10 +83,14 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
+      new RNCPickerPackage(),
       new LottiePackage(),
       new ReactNativeConfigPackage(),
+      new RNFusedLocationPackage(),
       new RNGestureHandlerPackage(),
       new RNReactNativeHapticFeedbackPackage(),
+      new RNPermissionsPackage(),
+      new ReactNativePushNotificationPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),

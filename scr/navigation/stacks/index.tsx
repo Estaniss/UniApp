@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Routes from '../routes';
 
-import { HomeScene, LoginScene } from 'scr/scenes';
+import { CalculatorScene, HomeScene, LoginScene } from 'scr/scenes';
 
 const Private = createStackNavigator();
 const Public = createStackNavigator();
@@ -29,7 +29,14 @@ export const PrivateStack = (): JSX.Element => {
         name={Routes.HOME}
         component={HomeScene}
         options={{
-          headerTitleAlign: 'center',
+          headerShown: false,
+        }}
+      />
+      <Private.Screen
+        name={Routes.CALC}
+        component={CalculatorScene}
+        options={{
+          headerShown: false,
         }}
       />
     </Private.Navigator>

@@ -1,26 +1,25 @@
 import React from 'react';
-import { Keyboard } from 'react-native';
 import { CommonActions, useNavigation } from '@react-navigation/native';
 import Login from './Login';
-import { Formik, FormikHelpers } from 'formik';
-import ResponseError from 'scr/utils/errors/ResponseError';
-import { Stacks } from 'scr/navigation';
+import { Formik } from 'formik';
 import { showAlert } from 'scr/utils';
-import { AuthApi } from 'scr/api';
 import { initialValues, validationSchema } from './form';
+import { Stacks } from 'scr/navigation';
 
 const LoginContainer: React.FC = () => {
   const navigation = useNavigation();
 
-  const onSubmit = async (
-    formValues: CredentialType,
-    { setSubmitting }: FormikHelpers<CredentialType>,
-  ): Promise<void> => {
-    setSubmitting(true);
-    showAlert('clicou');
-    try {
-      await AuthApi.login(formValues);
-      Keyboard.dismiss();
+  const credentials: CredentialType = {
+    login: 'thomas@gmail.com',
+    password: '123qwe',
+  };
+
+  const onSubmit = (formValues: CredentialType) => {
+    console.log('formValues', formValues);
+    if (
+      credentials.login === formValues.login &&
+      credentials.password === formValues.password
+    ) {
       navigation.dispatch(
         CommonActions.reset({
           index: 0,
@@ -31,12 +30,8 @@ const LoginContainer: React.FC = () => {
           ],
         }),
       );
-    } catch (error) {
-      if (error instanceof ResponseError) {
-        showAlert(error.message);
-      }
-    } finally {
-      setSubmitting(false);
+    } else {
+      showAlert('Email ou Password incorreto');
     }
   };
 

@@ -8,6 +8,8 @@ export enum Routes {
   LOGIN = 'LOGIN',
   HOME = 'HOME',
   QUEUES = 'QUEUES',
+  CALC = 'CALC',
+  USER = 'USER',
 }
 
 export default Routes;

@@ -18,14 +18,16 @@ const mediumRadius = getTheme('mediumRadius');
 export const Wrapper = styled.View`
   justify-content: center;
   display: flex;
-  align-items: center;
   background-color: ${backgroundColor};
-  width: 100%;
   flex: 1;
 `;
 
 export const LoginText = styled.Text`
   font-size: 32px;
+  color: ${primaryColor};
+  text-align: center;
+  width: 100%;
+  margin-bottom: ${moderateScale(60)}px;
 `;
 
 export const SubmitButton = styled(Touchable)`
@@ -73,4 +75,8 @@ export const EmptyWrapper = styled.View`
   background-color: ${backgroundColor};
   padding-vertical: ${smallSpacing};
   margin-top: ${moderateScale(50)}px;
+`;
+
+export const ButtonText = styled.Text`
+  color: ${contrastColor};
 `;
